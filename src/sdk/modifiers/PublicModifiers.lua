@@ -126,7 +126,7 @@ local function publicAbstractMethodInitializer(fieldName, value)
   return getFieldInitializer(fieldName, value, Method, {Public, Abstract})
 end
 
-public = setmetatable({
+getfenv(0)["public"] = setmetatable({
   static = setmetatable({
     final = setmetatable({
       inner = {

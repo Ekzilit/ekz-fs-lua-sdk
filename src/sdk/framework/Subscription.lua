@@ -61,7 +61,7 @@ local function validateSubscriber(targetVarName, targetVarAttributes, subscriber
   end
 end
 
-function subscribe(subscriber, subscriberMethodName, target, targetVarName, valueRequared)
+getfenv(0)["subscribe"] = function(subscriber, subscriberMethodName, target, targetVarName, valueRequared)
   local targetVarAttributes = getVarAttributes(target, targetVarName)
   if targetVarAttributes.subscribers == nil then
     targetVarAttributes.subscribers = {}
@@ -79,19 +79,19 @@ function subscribe(subscriber, subscriberMethodName, target, targetVarName, valu
   addSubscriber(targetVarAttributes.subscribers, subscriber, subscriberMethodName, valueRequared)
 end
 
-function unsubscribe(subscriber, subscriberMethodName, target, targetVarName)
+getfenv(0)["unsubscribe"] = function(subscriber, subscriberMethodName, target, targetVarName)
   local targetVarAttributes = getVarAttributes(target, targetVarName)
   validateSubscriber(targetVarName, targetVarAttributes, subscriber, subscriberMethodName)
   targetVarAttributes.subscribers[tostring(subscriber) .. "." .. subscriberMethodName] = nil
 end
 
-function suspend(subscriber, subscriberMethodName, target, targetVarName)
+getfenv(0)["suspend"] = function(subscriber, subscriberMethodName, target, targetVarName)
   local targetVarAttributes = getVarAttributes(target, targetVarName)
   validateSubscriber(targetVarName, targetVarAttributes, subscriber, subscriberMethodName)
   targetVarAttributes.subscribers[tostring(subscriber) .. "." .. subscriberMethodName].suspend = true
 end
 
-function resume(subscriber, subscriberMethodName, target, targetVarName)
+getfenv(0)["resume"] = function(subscriber, subscriberMethodName, target, targetVarName)
   local targetVarAttributes = getVarAttributes(target, targetVarName)
   validateSubscriber(targetVarName, targetVarAttributes, subscriber, subscriberMethodName)
   targetVarAttributes.subscribers[tostring(subscriber) .. "." .. subscriberMethodName].suspend = false

@@ -5,14 +5,14 @@
   <version>1</version>
 
   <title>
-    <en>Ekz enhancements</en>
+    <en>Ekz fs lua sdk</en>
   </title>
 
   <description>
-    <en><![CDATA[Ekz enhancements]]></en>
+    <en><![CDATA[Ekz farming simulator lua sdk]]></en>
   </description>
 
-  <iconFilename>ts.dss</iconFilename>
+  <iconFilename>ts.dds</iconFilename>
 
   <multiplayer supported="false"/>
 

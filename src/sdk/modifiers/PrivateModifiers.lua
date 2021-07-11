@@ -114,7 +114,7 @@ local function privateAbstractVariableObjectInitializer() error("Var can not be 
 local function privateAbstractVariableBeanInitializer() error("Bean can not be abstract") end
 local function privateAbstractMethodInitializer() error("Method can not be private abstract") end
 
-private = setmetatable({
+getfenv(0)["private"] = setmetatable({
   static = setmetatable({
     final = setmetatable({
       inner = {

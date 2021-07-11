@@ -589,7 +589,7 @@ end
 
 function classPackage(packagePath) _package = packagePath end
 
-function import(fullClassName)
+getfenv(0)["import"] = function(fullClassName)
   local className
   local pos = fullClassName:reverse():find("%.")
   if pos ~= nil then

@@ -106,7 +106,7 @@ local function getBeanClass(bean, targetClass)
   return wrappedClassInited
 end
 
-function bean(id, classFullName, params, prototype)
+getfenv(0)["bean"] = function(id, classFullName, params, prototype)
   local wrappedClassDef = _G[classFullName]
   if wrappedClassDef then
     local context = getCurrentClass()

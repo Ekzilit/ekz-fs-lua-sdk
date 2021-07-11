@@ -121,7 +121,7 @@ local function protectedAbstractMethodInitializer(fieldName, value)
   return getFieldInitializer(fieldName, value, Table, {Protected, Abstract})
 end
 
-protected = setmetatable({
+getfenv(0)["protected"] = setmetatable({
   static = setmetatable({
     final = setmetatable({
       inner = {
