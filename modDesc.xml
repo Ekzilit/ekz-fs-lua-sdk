@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="40">
+  <author>Ekzilit</author>
+
+  <version>1</version>
+
+  <title>
+    <en>Ekz enhancements</en>
+  </title>
+
+  <description>
+    <en><![CDATA[Ekz enhancements]]></en>
+  </description>
+
+  <iconFilename>ts.dss</iconFilename>
+
+  <multiplayer supported="false"/>
+
+  <l10n filenamePrefix="modDesc_l10n"/>
+
+  <actions>
+  </actions>
+
+  <inputBinding>
+  </inputBinding>
+
+  <extraSourceFiles>
+    <sourceFile filename="src\sdk\utils\TableUtils.lua" />
+
+    <sourceFile filename="src\sdk\Constants.lua" />
+
+<!--
+    #framework
+-->
+    <sourceFile filename="src\sdk\modifiers\Modifiers.lua" />
+    <sourceFile filename="src\sdk\modifiers\PackageModifiers.lua" />
+    <sourceFile filename="src\sdk\modifiers\PublicModifiers.lua" />
+    <sourceFile filename="src\sdk\modifiers\PrivateModifiers.lua" />
+    <sourceFile filename="src\sdk\modifiers\ProtectedModifiers.lua" />
+    <sourceFile filename="src\sdk\framework\Objects.lua" />
+    <sourceFile filename="src\sdk\framework\Beans.lua" />
+    <sourceFile filename="src\sdk\framework\Subscription.lua" />
+
+    <sourceFile filename="src\sdk\Object.lua" />
+    <sourceFile filename="src\sdk\Boolean.lua" />
+    <sourceFile filename="src\sdk\Function.lua" />
+    <sourceFile filename="src\sdk\Map.lua" />
+    <sourceFile filename="src\sdk\Number.lua" />
+    <sourceFile filename="src\sdk\String.lua" />
+
+<!--
+    # using frameworks
+-->
+    <sourceFile filename="src\sdk\event\EventDispatcher.lua" />
+
+<!--
+    #context
+-->
+
+<!--
+    #tests
+-->
+    <sourceFile filename="testsrc\sdk\resource\AbstractClass.lua" />
+    <sourceFile filename="testsrc\sdk\resource\FirstClass.lua" />
+    <sourceFile filename="testsrc\sdk\resource\SecondClass.lua" />
+    <sourceFile filename="testsrc\sdk\resource\ThirdClass.lua" />
+    <sourceFile filename="testsrc\sdk\resource\PublicClass.lua" />
+    <sourceFile filename="testsrc\sdk\TestInnerClassExtends.lua" />
+
+    <sourceFile filename="src\SdkContext.lua" />
+  </extraSourceFiles>
+
+</modDesc>
