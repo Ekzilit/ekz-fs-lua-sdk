@@ -12,7 +12,7 @@
     <en><![CDATA[Ekz farming simulator lua sdk]]></en>
   </description>
 
-  <iconFilename>ts.dds</iconFilename>
+  <iconFilename>ekz-fs-lua-sdk.png</iconFilename>
 
   <multiplayer supported="false"/>
 
