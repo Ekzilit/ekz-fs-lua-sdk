@@ -565,7 +565,7 @@ function declareClass(name, parents, rawClass, modifiers, interfacesToImplement)
       if rawClass.classAttributes.interface == true then
         return finishClassDeclaration(rawClass, name)
       end
-      return finishClassDeclaration(extend(rawClass, _G["sdk.Object"]), name)
+      return finishClassDeclaration(extend(rawClass, _G["ekz.sdk.Object"]), name)
     end
   else
     for _, parent in ipairs(parents) do

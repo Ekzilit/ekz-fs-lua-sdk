@@ -1,5 +1,5 @@
-package "sdk"
-import "sdk.String"
+package "ekz.sdk"
+import "ekz.sdk.String"
 public.class("Object") {
   public("objectName", "Object");
   --default init
