@@ -1,5 +1,5 @@
-package "ekz.sdk.event"
-import "ekz.sdk.Map"
+package "sdk.event"
+import "sdk.Map"
 public.class("EventDispatcher") {
 
   private.Map("subscribers", {});

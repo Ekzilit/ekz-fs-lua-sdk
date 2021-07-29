@@ -1,5 +1,5 @@
-package "ekz.sdk"
-import "ekz.sdk.Object"
+package "sdk"
+import "sdk.Object"
 public.class("String", Object) {
   public.static.final.method("is", function(value)
     return type(value) == "string" and true or false
